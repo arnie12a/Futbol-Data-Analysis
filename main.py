@@ -1,6 +1,7 @@
 import pandas as pd
 import os
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 
 
 # Gets the data from the indicated league
@@ -75,7 +76,8 @@ def plotGoldenBoots(country, data):
     plt.yticks(range(0, max(goals) + 1))
     plt.tight_layout()
 
-    plt.show()
+    saveFileName = country + "-GoldenBoots.png"
+    plt.savefig(saveFileName, bbox_inches='tight')
 
 if __name__ == "__main__":
     countries = ['Germany', 'England', 'France', 'Spain', 'Italy']
