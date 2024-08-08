@@ -79,7 +79,15 @@ def plotGoldenBoots(country, data):
 
 if __name__ == "__main__":
     countries = ['Germany', 'England', 'France', 'Spain', 'Italy']
-    dfs = (analyzeLeague(countries[1]))
-    topTeams = getTop5TeamsByPoint(dfs)
-    top10scorers, goldenBoots = goldenBoot(dfs)
-    plotGoldenBoots(countries[1], goldenBoots)
+    #dfs = (analyzeLeague(countries[1]))
+    #topTeams = getTop5TeamsByPoint(dfs)
+    #top10scorers, goldenBoots = goldenBoot(dfs)
+    #plotGoldenBoots(countries[1], goldenBoots)
+    for country in countries:
+        dfs = (analyzeLeague(country))
+        topTeams = getTop5TeamsByPoint(dfs)
+        top10scorers, goldenBoots = goldenBoot(dfs)
+        plotGoldenBoots(country, goldenBoots)
+
+
+    
